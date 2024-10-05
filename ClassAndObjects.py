@@ -6,7 +6,7 @@ class Character:
         self.health = health
         self.damage = damage
         self.speed = speed
-        
+
     def double_speed(self):
         print("Double Speed!" , "\n", self.name)
         self.speed *= 2
@@ -37,6 +37,7 @@ if __name__ == "__main__":
     ninja = Character("ninja", 80, 40, 40)
     demon = Character("demon", 50 ,20 ,10)
     imp = Character("imp", 20, 10, 10)
+    imp2 = Character("imp2", 40, 20, 15)
 
 
     warrior.print_char_details()
