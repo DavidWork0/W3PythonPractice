@@ -5,7 +5,7 @@ name: Python application
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -44,7 +44,7 @@ jobs:
       uses: codecov/codecov-action@v3  # Use Codecov action
       with:
         token: ${{ secrets.CODECOV_TOKEN }}  # Token from GitHub secrets (for private repos)
-        
+
     - name: Upload test results to Codecov
       if: ${{ !cancelled() }}
       uses: codecov/test-results-action@v1
