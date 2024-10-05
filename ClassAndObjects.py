@@ -6,20 +6,25 @@ class Character:
         self.health = health
         self.damage = damage
         self.speed = speed
+        
     def double_speed(self):
-        print("Double Speed!", self.name)
+        print("Double Speed!" , "\n", self.name)
         self.speed *= 2
+
     def double_health(self):
-        print("Double Health!", self.name)
+        print("Double Health!", "\n", self.name)
         self.health *= 2
+
     def double_damage(self):
-        print("Double Damage!", self.name)
+        print("Double Damage!", "\n", self.name)
         self.damage *= 2
+
     def ultra_buff(self):
-        print("Double EVERYTHING!!!", self.name)
+        print("Double EVERYTHING!!!", "\n", self.name)
         self.speed *= 2
         self.health *= 2
         self.damage *= 2
+
     def print_char_details(self):
         print("Name:", self.name)
         print("Health:", {self.health})
@@ -27,25 +32,25 @@ class Character:
         print("Speed:", {self.speed})
         print("\n")
 
+if __name__ == "__main__":
+    warrior = Character("Warrior", 100 ,50 ,10)
+    ninja = Character("ninja", 80, 40, 40)
+    demon = Character("demon", 50 ,20 ,10)
+    imp = Character("imp", 20, 10, 10)
 
-warrior = Character("Warrior", 100 ,50 ,10)
-ninja = Character("ninja", 80, 40, 40)
-demon = Character("demon", 50 ,20 ,10)
-imp = Character("imp", 20, 10, 10)
 
+    warrior.print_char_details()
+    ninja.print_char_details()
+    demon.print_char_details()
+    imp.print_char_details()
 
-warrior.print_char_details()
-ninja.print_char_details()
-demon.print_char_details()
-imp.print_char_details()
+    warrior.double_speed()
+    ninja.double_health()
 
-warrior.double_speed()
-ninja.double_health()
+    warrior.print_char_details()
+    ninja.print_char_details()
 
-warrior.print_char_details()
-ninja.print_char_details()
+    warrior.ultra_buff()
 
-warrior.ultra_buff()
-
-warrior.print_char_details()
-ninja.print_char_details()
+    warrior.print_char_details()
+    ninja.print_char_details()
