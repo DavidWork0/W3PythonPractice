@@ -55,3 +55,4 @@ if __name__ == "__main__":
 
     warrior.print_char_details()
     ninja.print_char_details()
+#test
