@@ -28,6 +28,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install pytest pytest-cov
+        pip install codecov  # Install Codecov uploader
+        
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -37,5 +40,10 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Code coverage
-      run: pytest --cov --cov-report=xml
+    - name: Run tests with coverage
+      run: |
+        pytest --cov=your_module tests/
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3  # Use Codecov action
+      with:
+        token: ${{ aee03ba8-b2ab-4913-a237-0c396472673e }}  # Optional for public repos
